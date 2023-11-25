@@ -3,9 +3,10 @@ import {
   Component,
   ElementRef,
   ViewChild,
+  signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import EditorJS from '@editorjs/editorjs';
+import EditorJS, { OutputData } from '@editorjs/editorjs';
 // @ts-ignore
 import Header from '@editorjs/header';
 // @ts-ignore
@@ -32,7 +33,7 @@ import InlineCode from '@editorjs/inline-code';
 import Underline from '@editorjs/underline';
 
 @Component({
-  selector: 'app-editor',
+  selector: 'App-editor',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './editor.component.html',
@@ -43,6 +44,7 @@ export class EditorComponent {
   @ViewChild('editor') editorEl?: ElementRef;
 
   editor?: EditorJS;
+  outputData = signal<OutputData | undefined>(undefined)
 
   ngAfterViewInit() {
     this.editor = new EditorJS({
@@ -118,6 +120,7 @@ export class EditorComponent {
       ?.save()
       .then((outputData) => {
         console.log('Article data: ', outputData);
+        this.outputData.set(outputData)
       })
       .catch((error) => {
         console.log('Saving failed: ', error);

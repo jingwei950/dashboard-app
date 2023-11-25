@@ -1,11 +1,12 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { EditorComponent } from 'src/app/shared/components/editor/editor.component';
+import { HeaderComponent } from '../header/header.component';
+import { HomeComponent } from 'src/app/pages/home/home.component';
 
 @Component({
-  selector: 'app-main',
+  selector: 'App-main',
   standalone: true,
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css'],
-  imports: [EditorComponent],
+  imports: [HeaderComponent, HomeComponent, EditorComponent],
 })
 export class MainComponent {}

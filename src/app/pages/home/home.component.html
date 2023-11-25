@@ -1,0 +1,21 @@
+<div>
+    
+    @defer(on viewport){
+        <button class="p-2 bg-gray-300 rounded-lg" (click)="onClick()">Create post</button>
+
+        @if (editorState()) {
+            <App-editor />
+        }
+    }
+    @loading (after 2000ms; minimum 2000ms){
+        <p>Loading...</p>
+        }
+    
+    @placeholder(minimum 2000ms){
+    <p>Loading...</p>
+    }
+
+    @error{
+    <p>error</p>
+    }
+</div>
