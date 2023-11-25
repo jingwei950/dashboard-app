@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.codex-editor{
+    @apply bg-neutral-50 max-w-3xl h-fit rounded-lg mx-10;
+}
+
+.codex-editor__redactor{
+    @apply !pb-0
+}
+
+.ce-block__content{
+    @apply hover:bg-gray-300 rounded-lg max-w-full ml-14 mr-0
+}
+
+.cdx-block{
+    @apply px-2;
+}

@@ -59,8 +59,16 @@ export class EditorComponent {
         header: Header,
         underline: Underline,
         raw: RawTool,
-        embed: Embed,
         code: CodeTool,
+        embed: {
+          class: Embed,
+          config: {
+            services: {
+              youtube: true,
+              coub: true
+            }
+          }
+        },
         list: {
           class: NestedList,
           inlineToolbar: true,
@@ -78,7 +86,7 @@ export class EditorComponent {
         linkTool: {
           class: LinkTool,
           config: {
-            endpoint: 'http://localhost:4200', // Your backend endpoint for url data fetching,
+            endpoint: 'rivervalleyirregulars', // Your backend endpoint for url data fetching,
           },
         },
         checklist: {
