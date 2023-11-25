@@ -3,28 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.codex-editor{
+.codex-editor {
     @apply bg-neutral-50 max-w-3xl h-fit rounded-lg mx-10;
 }
 
-.codex-editor__redactor{
+.codex-editor__redactor {
     @apply !pb-0
 }
 
-.ce-block__content{
+.ce-block__content {
     @apply hover:bg-gray-300 rounded-lg max-w-full ml-14 mr-0
 }
 
-.cdx-block{
-    @apply px-2;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: inherit !important;
-    font-weight: inherit !important;
+.ce-paragraph, .ce-header {
+    @apply !px-2;
 }

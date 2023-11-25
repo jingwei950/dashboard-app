@@ -119,7 +119,12 @@ export class EditorComponent {
     this.editor
       ?.save()
       .then((outputData) => {
-        console.log('Article data: ', outputData);
+        console.log('Article data: ', outputData.time);
+
+        const newOutputData = {id: 1, ...outputData}
+
+        console.log(newOutputData)
+
         this.outputData.set(outputData)
       })
       .catch((error) => {
