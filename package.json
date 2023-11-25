@@ -35,6 +35,7 @@
     "@editorjs/underline": "^1.1.0",
     "codex-notifier": "^1.1.2",
     "codex-tooltip": "^1.0.5",
+    "flowbite": "^2.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
