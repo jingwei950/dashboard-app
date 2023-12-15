@@ -1,0 +1,11 @@
+{
+    "previews": [
+      {
+        "command":
+          ["ng", "serve"]
+        ,
+        "id": "web",
+        "manager": "web"
+      }
+    ]
+  }
